@@ -192,9 +192,12 @@ class VGAE_trainer():
         plot_latent_z: bool, whether to plot nodes with random sampled latent features.
         """
         self.model.eval()
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        data.x = data.x.to(device)
+        data.edge_index = data.edge_index.to(device)
         _ = self.model.encode(data.x, data.edge_index) 
-        z_m = self.model.__mu__.detach().numpy()
-        z_S = (self.model.__logstd__.exp() ** 2).detach().numpy()  # variance
+        z_m = self.model.__mu__.detach().cpu().numpy()
+        z_S = (self.model.__logstd__.exp() ** 2).detach().cpu().numpy()  # variance
         if plot_latent_mu:
             # z_np = z.detach().numpy()
             fig, ax = plt.subplots(figsize=(6, 6), dpi=80)
@@ -329,5 +332,3 @@ if __name__ == "__main__":
     # python -m GenKI.train --dir data --logdir log_dir/run0 --seed 8096 -E -0.1 -v
     # python -m GenKI.train --dir data_covid --logdir log_dir/sigma0_covid --lr 5e-3 --seed 8096 -v
     # python -m GenKI.train --dir data --train_out train_log --do_test --generank_out genelist --r2_out r2_score -v
-
-
