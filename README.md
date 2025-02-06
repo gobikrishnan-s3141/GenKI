@@ -14,7 +14,7 @@ Fist install dependencies of GenKI with `conda`:
 conda env create -f environment.yml
 conda activate ogenki
 ```
-Install `pytorch-geometric` following the document:<br>
+Install `torch_geometric` following the document:<br>
 https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html
 <br/>
 <br/>
