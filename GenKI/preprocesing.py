@@ -1,5 +1,5 @@
 from pathlib import Path
-from anndata import (
+from anndata.io import (
     AnnData,
     read_h5ad,
     read_csv,

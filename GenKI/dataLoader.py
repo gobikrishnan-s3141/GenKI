@@ -1,6 +1,6 @@
 import numpy as np
 import scipy
-import anndata
+import anndata.io
 import os
 import torch 
 from torch_geometric.data import Data 
