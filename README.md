@@ -7,6 +7,7 @@ A VGAE (Variational Graph Auto-Encoder) based model to learn perturbation using 
     <img src="logo.jpg" alt="drawing" width="300"/>
 </p>
 <br/>
+
 ### Install GenKI with `Docker`
 Install `Docker` for your OS (Linux/MacOS/Windows) and then run :
 ```shell
