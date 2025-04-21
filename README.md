@@ -21,8 +21,6 @@ conda activate ogenki
 ```
 Install `torch_geometric` following the document:<br>
 https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html
-<br/>
-<br/>
 
 ### Install GenKI with `pip`:
 ```shell
@@ -34,6 +32,5 @@ git clone https://github.com/yjgeno/GenKI.git
 cd GenKI
 pip install .
 ```
-<br/>
 #### Tutorial
 Virtual KO experiment:<br> https://github.com/yjgeno/GenKI/blob/master/notebook/Example.ipynb <br>
