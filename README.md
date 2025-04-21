@@ -35,6 +35,5 @@ cd GenKI
 pip install .
 ```
 <br/>
-
 #### Tutorial
 Virtual KO experiment:<br> https://github.com/yjgeno/GenKI/blob/master/notebook/Example.ipynb <br>
