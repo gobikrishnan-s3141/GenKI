@@ -38,4 +38,8 @@ SHELL ["conda", "run", "-n", "ogenki", "/bin/bash", "-c"]
 
 # jupyter notebook
 EXPOSE 8888
-CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
+#CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
+CMD ["jupyter", "nbconvert", "--execute", \
+     "--ExecutePreprocessor.timeout=600", \
+     "--to", "notebook", \
+     "/notebook/genki_test.ipynb"]
