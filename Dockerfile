@@ -1,5 +1,5 @@
-# Python base image [pre-built debian-base python env]
-FROM continuumio/miniconda3:latest
+# Miniforge image [pre-built ubuntu-base python env]
+FROM condaforge/miniforge3
 
 # user
 ARG USERNAME=mamba
