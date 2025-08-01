@@ -17,6 +17,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 # install dependencies
 RUN apt-get update &&  apt-get install -y --no-install-recommends build-essential \
+	adduser \
 	git \
 	libgl1-mesa-glx \
 	gfortran \
