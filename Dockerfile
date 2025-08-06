@@ -14,7 +14,8 @@ ENV DEBIAN_FRONTEND=noninteractive \
 RUN apt-get update &&  apt-get install -y --no-install-recommends build-essential \
 	adduser \
 	git \
-	libgl1-mesa-glx \
+	libgl1 \
+ 	libglx-mesa0 \
 	gfortran \
 	zlib1g-dev && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
