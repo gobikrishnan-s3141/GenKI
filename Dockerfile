@@ -22,7 +22,7 @@ RUN apt-get update &&  apt-get install -y --no-install-recommends build-essentia
 
 # user
 ARG USERNAME=mamba
-ARG USERID=1000
+ARG USERID=1001
 RUN adduser --disabled-password --uid $USERID $USERNAME
 
 # workspace
