@@ -1,11 +1,6 @@
 # Miniforge image [pre-built ubuntu-base python env]
 FROM condaforge/miniforge3
 
-# user
-ARG USERNAME=mamba
-ARG USERID=1000
-RUN adduser --disabled-password --uid $USERID $USERNAME
-
 # set up environment (reduce package overhead)
 ENV DEBIAN_FRONTEND=noninteractive \
     TZ=UTC \
@@ -23,6 +18,11 @@ RUN apt-get update &&  apt-get install -y --no-install-recommends build-essentia
 	gfortran \
 	zlib1g-dev && \
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# user
+ARG USERNAME=mamba
+ARG USERID=1000
+RUN adduser --disabled-password --uid $USERID $USERNAME
 
 # workspace
 RUN mkdir -p $BUILD_HOME && chown -R $USERNAME:$USERNAME $BUILD_HOME
