@@ -1,0 +1,56 @@
+[workspace]
+channels = ["conda-forge"]
+name = "ogenki"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.12.*"
+pip = "*"
+anndata = "*"
+numpy = "*"
+matplotlib-base = "*"
+pandas = "*"
+scipy = "*"
+seaborn = "*"
+h5py = "*"
+tqdm = "*"
+patsy = "*"
+networkx = "*"
+natsort = "*"
+joblib = "*"
+numba = "*"
+umap-learn = "*"
+packaging = "*"
+setuptools-scm = "*"
+black = "*"
+docutils = "*"
+sphinx = "*"
+sphinx_rtd_theme = "*"
+leidenalg = "*"
+louvain = "*"
+pytest = "*"
+pytest-nunit = "*"
+dask-core = "*"
+fsspec = "*"
+zappy = "*"
+zarr = "*"
+profimp = "*"
+flit-core = "*"
+ipywidgets = "*"
+jupyter = ">=1.1.1,<2"
+
+[pypi-dependencies]
+flit = "*"
+session-info = "*"
+scanpy = "*"
+torch = "*"
+tensorboard = "*"
+torch-geometric = "*"
+scikit-learn = "*"
+scikit-misc = "*"
+ray = "*"
+notebook = "*"
+GenKI = {path = ".", editable = true}
