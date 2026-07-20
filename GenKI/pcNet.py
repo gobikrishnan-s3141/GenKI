@@ -47,7 +47,7 @@ def _truncated_svd(M, nComp, solver, random_state, n_oversamples):
         if k >= min(M.shape):
             _, _, VT = _full_svd(M, full_matrices=False)
             return VT[:nComp, :].T
-        _, s, VT = _scipy_svds(M, k=k)
+        _, s, VT = _scipy_svds(M, k=k, random_state=random_state)
         # svds returns ascending singular values; reorder to descending.
         order = np.argsort(s)[::-1]
         return VT[order, :].T
